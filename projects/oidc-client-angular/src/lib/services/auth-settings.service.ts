@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Log, User, UserManager } from 'oidc-client';
 import { LogLevel } from '../enums/log-level.enum';
+import { NoopLogger } from '../logging/noop-logger';
 import { AuthSettings } from '../models/auth-settings.model';
-import { NoopLogger } from '../noop-logger';
 
 @Injectable({
   providedIn: 'root'
