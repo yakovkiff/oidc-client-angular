@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Log, User, UserManager } from 'oidc-client';
 import { LogLevel } from '../enums/log-level.enum';
 import { AuthSettings } from '../models/auth-settings.model';
-import { NoopLoggerService } from './noop-logger.service';
+import { NoopLogger } from '../noop-logger';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class AuthSettingsService {
       throw new Error('userManagerSettings not defined in AuthSettings.');
     }
     if (!settings.logger) {
-      settings.logger = new NoopLoggerService();
+      settings.logger = new NoopLogger();
     }
     if (!settings.logLevel) {
       settings.logLevel = LogLevel.None;
