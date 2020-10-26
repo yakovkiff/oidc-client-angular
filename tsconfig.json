@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "oidc-client-angular": [
+        "dist/oidc-client-angular"
+      ],
+      "oidc-client-angular/*": [
+        "dist/oidc-client-angular/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
