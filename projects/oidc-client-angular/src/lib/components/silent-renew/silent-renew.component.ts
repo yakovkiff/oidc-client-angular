@@ -11,10 +11,7 @@ export class SilentRenewComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    this.authService.userManager.signinSilentCallback()
-      .then(user => {
-        this.authService.userSubject.next(user);
-      });
+    this.authService.signinSilentCallback();
   }
 
 }
