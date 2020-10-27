@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import { AuthHiddenService } from '../../services/auth-hidden.service';
 
 @Component({
   selector: 'lib-silent-renew',
@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class SilentRenewComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthHiddenService) { }
 
   ngOnInit() {
     this.authService.signinSilentCallback();

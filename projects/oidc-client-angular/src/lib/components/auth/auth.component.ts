@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import { AuthHiddenService } from '../../services/auth-hidden.service';
 
 @Component({
   selector: 'lib-auth',
@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
 export class AuthComponent implements OnInit {
 
   constructor(
-    private authService: AuthService,
+    private authService: AuthHiddenService,
   ) { }
 
   ngOnInit() {
